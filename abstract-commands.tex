@@ -288,7 +288,10 @@ height=169mm, contents={%
 \newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}%
 \newcommand{\talk}[2]%
 {%
-	& \textbf{#1} \newline \emph{#2}
+	& \textbf{#1}
+        \ifthenelse{\equal{#2}{}}%
+        {}%
+        {\newline\emph{#2}}
 }%
 % Titel -- Redner
 
