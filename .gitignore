@@ -1,0 +1,4 @@
+*.aux
+*.log
+upload-pdf.sh
+rawinput/
