@@ -352,11 +352,23 @@ Daten zu verarbeiten, filtern und zu transformieren.%
 }
 
 \newtimeslot{15:45}
-\abstractAPH{}{Lightning Talks}{}{}
+\abstractAPH{}{Lightning Talks}{}{
+  Folgende Themen werden präsentiert werden:
+  \vspace{-0.5\baselineskip}
+  \begin{itemize}
+    \RaggedRight
+    \setlength{\itemsep}{-0.5\baselineskip}
+    \item \emph{Hans-Jörg Stark:} OpenDroneMap -- Lessons Learnt
+    \item \emph{Johannes Kröger:} 5-Minuten-Kartographie-Rezepte aus der QGIS-Trickkiste
+    \item \emph{Arne Schubert:} Why is spatial not MIME?
+    \item \emph{Christian Mayer:} WebMapping, aber mit Style!
+  \end{itemize}
+  \justifying
+}
 
 \abstractZwei{Frederik Ramm}%
-{Lügen mit Statistik, OpenStreetMap-Edition}%
-{Missverständnisse und Fehlinterpretationen mit OSM-Metadaten}%
+{Lügen mit Statistik, OpenStreetMap-Edition\vspace{0.2em}}%
+{Missverständnisse und Fehlinterpretationen mit OpenStreetMap-Metadaten}%
 {%
 In diesem Vortrag geht es nicht um die Geodaten in OpenStreetMap, sondern um die Daten hinter den
 Daten. Wer hat was wann eingetragen, wie viele Mapper arbeiten eigentlich an den Daten, und welche
@@ -370,7 +382,7 @@ man es richtig macht.%
 {Energieeffizientes PKW-Routing mit OpenStreetMap}%
 {}%
 {%
-Energieeffizientes PKW-Routing, manchmal auch Eco-Routing genannt, ist von der Idee nicht neu, aber
+Energieeffizientes PKW-Routing, manchmal auch Eco"=Routing genannt, ist von der Idee nicht neu, aber
 kaum verbreitet und begrifflich undefiniert. Dieser Beitrag schafft hier Klarheit, zeigt das
 Potential für die Elektromobilität, diskutiert die besonderen Anforderungen, die energieeffizientes
 Routing an die Qualität von Straßenkarten stellt und untersucht die Eignung von OpenStreetMap für
@@ -385,13 +397,13 @@ diesen Anwendungsbereich.%
 Neben den mitgelieferten Funktionen bietet QGIS dank seines umfangreichen Pluginkatalogs eine
 Vielzahl von Möglichkeiten Kartenprojekte in unterschiedlicher Art und Weise und für
 unterschiedlichste Zwecke zu exportieren. Etwa per automatisierter "`Stapelverarbeitung"', als
-interaktive Webkarten, Videos oder auch 3D-Viewer. Die Atlas-Erzeugung und die Plugins HTML Image
-Map Creator, qgis2web, QTiles, Time Manager und qgis2threejs stellen diese Optionen zur Verfügung.%
+interaktive Webkarten, Videos oder auch 3D-Viewer. Die Atlas-Erzeugung und die Erweiterungen HTML Image
+Map Creator, qgis2web, QTiles, Time Manager sowie qgis2threejs stellen diese Optionen zur Verfügung.%
 }
 
 \abstractZwei{Robin Luckey}%
 {Master Portal}%
-{Das Open-Source Web-GIS der Stadt Hamburg}%
+{Das Open-Source-Web-GIS der Stadt Hamburg}%
 {%
   Das Masterportal ist eine OGC-konforme, Open-Source-Web-GIS-Lösung (MIT-Lizenz) zur Generierung von digitalen
 Kartenanwendungen. Es basiert auf BackboneJS und OpenLayers und wird aktiv von der Stadt Hamburg
@@ -422,9 +434,20 @@ kurz darlegen, was für ein besseres Routing noch fehlt.%
 {Datenqualität sicherstellen mit QGIS}%
 {}%
 {%
-QGIS bietet eine Reihe von Funktionen, um die Geometrien eines Datensatzes zu überprüfen und zu
-korrigieren. Der Vortrag gibt einen Überblick über die beiden Plugins \emph{Geometrychecker} und
-\emph{Topologychecker} und zeigt Gemeinsamkeiten und Unterschiede auf.%
+% Langen Abstract verwendet und mittendrin etwas gekürzt, damit die drei Vorträge die zwei
+% Seiten schöner/besser füllen.
+QGIS bietet eine Reihe von Funktionen, um die Geometrien eines Datensatzes zu
+überprüfen und zu korrigieren. Das Plugin \emph{Geometrychecker} erlaubt es, einen
+Datensatz auf bestimmte Kriterien (z.\,B. doppelte Knoten, Überlappungen,
+Lücken) zu überprüfen. Die Fehler werden grafisch angezeigt und der
+Benutzer hat die Möglichkeit, sie automatisch zu beheben zu lassen. Der
+Geometrychecker wurde in letzter Zeit um neue Funktionen erweitert.
+
+Eine ähnliche Funktionalität hat das Plugin \emph{Topologychecker},
+allerdings bietet es keine automatische Behebung der Fehler an und es gibt
+andere Checks als im Geometrychecker. Der Vortrag gibt einen Überblick über
+die Möglichkeiten beider Plugins und zeigt Gemeinsamkeiten und Unterschiede
+auf.
 }
 
 % time: 2018-03-22 16:55:00
@@ -434,17 +457,25 @@ korrigieren. Der Vortrag gibt einen Überblick über die beiden Plugins \emph{Ge
 {%
 Die BKG WebMap des Bundesamts für Kartographie und Geodäsie ist eine JavaScript-Bibliothek, die
 verschiedene Funktionen zur einfachen Erstellung interaktiver Karten bereithält. Sie wurde jetzt auf
-der Basis von OpenLayers~4 neu entwickelt und wird auf der FOSSGIS-Konferenz erstmalig präsentiert.%
+der Basis von OpenLayers~4 neu entwickelt und wird auf der FOSSGIS-Konferenz erstmalig präsentiert.
+
+% Folgender Satz stammt aus der langen Beschreibung, um Weißräume im Heft zu füllen.
+Im Vortrag wird beispielhaft gezeigt, wie schnell eine Webkarte auf der Basis
+der BKG WebMap erstellt und in eine beliebige Webseite eingebunden werden kann.
 }
 
 % time: 2018-03-22 16:55:00
 \abstractVier{Hartmut Holzgraefe}%
-{OSM Daten mit Mapnik und Python rendern}%
-{Eine kurze Einführung }%
+{OpenStreetMap-Daten mit Mapnik und Python rendern\vspace{0.2em}}%
+{Eine kurze Einführung}%
 {%
 Mapnik ist eine Open-Source-Bibliothek zur Erstellung von Karten, wie z.\,B. auf openstreetmap.org
 zu sehen. Mapnik bietet eine eigene XML-basierte Stylesheet-Sprache und verarbeitet Daten aus
-verschiedenen Geodaten-Quellen.%
+verschiedenen Geodaten-Quellen.
+
+Der Vortrag gibt einen kurzen Überblick über Eingabe-Datenformate, Stylesheets und
+Ausgabe-Datenformate. Als einfaches Anwendungsbeispiel wird gezeigt wie OSM-Daten zusammen
+mit einem GPX-Track als druckbares PDF ausgegeben werden können.
 }
 
 \newtimeslot{17:30}
@@ -464,11 +495,11 @@ Alternativen werden aufgezeigt und andere Lösungswege skizziert, wie z.\,B. üb
 
 % time: 2018-03-22 17:30:00
 \abstractZwei{Armin Retterath}%
-{INSPIRE Downloaddienste}%
+{INSPIRE-Downloaddienste}%
 {Praktische Erfahrungen der letzten vier Jahre}%
 {%
 Im Vortrag werden die neuesten Entwicklungen bezüglich der Umsetzung und Nutzung von
-INSPIRE-Downloaddiensten in den Ländern Hessen, Rheinland-Pfalz und Saarland anhand praktischer
+INSPIRE"=Downloaddiensten in Hessen, Rheinland-Pfalz und dem Saarland anhand praktischer
 Beispiele vorgestellt. Dabei wird insbesondere der immense Mehrwert für die Praxis ersichtlich, den
 die Standardisierung durch die INSPIRE-Richtlinie gebracht hat.%
 }
@@ -488,7 +519,7 @@ anderen angewendet.%
 
 \newsmalltimeslot{18:00}
 \abstractZwei{}%
-{FOSSGIS-Mitgliederversammlung}%
+{Mitgliederversammlung des FOSSGIS~e.V.}%
 {}%
 {%
 Alle Mitglieder sind eingeladen, teilzunehmen und sich zu beteiligen.%
