@@ -163,9 +163,13 @@ height=169mm, contents={%
 % has to be a separate function and has to be surrounded by \makeatletter for technical reasons
 \makeatletter
 \newcommand{\isabstractempty}[1]{%
-		\vspace{0.5em}\newline%
-		#1 \par% % abstract
-		\vspace{1.5em}% space to the next talk even if there is an abstract
+  \ifstrempty{#1}{%
+    \vspace{1.5em}%
+  }{%
+    \vspace{0.5em}\newline%
+    #1 \par% % abstract
+    \vspace{1.5em}% space to the next talk even if there is an abstract
+  }%
 }
 \makeatother
 
