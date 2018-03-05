@@ -1,14 +1,10 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo mkdir /mnt/texlive
-- wget http://mirror.ctan.org/systems/texlive/Images/texlive2017.iso
-- sudo mount -o loop texlive2017.iso /mnt/texlive
-- cd /mnt/texlive
-- sudo apt-get install tex-common texinfo equivs perl-tk perl-doc
-- sudo mkdir -p /opt/texlive
-- echo "selected_scheme scheme-full" > ~/texlive-installation-profile-options.profile
-- sudo ./install-tl --profile=~/texlive-installation-profile-options.profile
+- sudo apt install python
+- git clone https://github.com/MaxNoe/texlive-batch-installation.git
+- cd texlive-batch-installation
+- python install_texlive/__main__.py -t 2017 -s a
 - export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
 - export MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH
 - export INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
