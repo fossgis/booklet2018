@@ -1,6 +1,6 @@
 ## About this repository
 
-This repository is for the source code of the booklet of [FOSSGIS 2017 conference](http://fossgis-konferenz.de/2017/) in Bonn from 21 to 24 March 2018. A nightly build can be found [here](https://michreichert.de/fossgis/booklet18/master.pdf).
+This repository is for the source code of the booklet of [FOSSGIS 2018 conference](http://fossgis-konferenz.de/2018/) in Bonn from 21 to 24 March 2018. A nightly build can be found [here](https://michreichert.de/fossgis/booklet18/master.pdf).
 
 ## Building
 
