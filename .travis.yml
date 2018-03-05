@@ -1,10 +1,11 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt install python
+- sudo apt install python python-pexpect
 - git clone https://github.com/MaxNoe/texlive-batch-installation.git
 - cd texlive-batch-installation
-- python install_texlive/__main__.py -t 2017 -s a
+- sudo pip install .
+- sudo install_texlive -t 2017 -s a
 - export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
 - export MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH
 - export INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
