@@ -11,6 +11,13 @@ pdflatex master.tex
 pdflatex master.tex
 ```
 
+## Dependencies 
+
+Install missing dependencies with 
+```sh 
+texliveonfly master.tex 
+```
+
 ## License
 
 This booklet is licensed under [Creative Commons Attribution Share-Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/) if not otherwise stated. Logos are not available under that license.
