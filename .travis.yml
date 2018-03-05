@@ -1,6 +1,16 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+- sudo mkdir /mnt/texlive
+- wget http://mirror.ctan.org/systems/texlive/Images/texlive2017.iso
+- sudo mount -o loop texlive2017.iso /mnt/texlive
+- cd /mnt/texlive
+- sudo apt-get install tex-common texinfo equivs perl-tk perl-doc
+- sudo mkdir -p /opt/texlive
+- echo "selected_scheme scheme-full" > ~/texlive-installation-profile-options.profile
+- sudo ./install-tl --profile=~/texlive-installation-profile-options.profile
+- export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+- export MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH
+- export INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error master.tex
