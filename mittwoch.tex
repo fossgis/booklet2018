@@ -81,16 +81,20 @@ Gespräch und Erfahrungsaustausch zur Verfügung.
 
 
 \abstractVier{Till Adams}%
-{Wir reden doch alle Standard -- oder etwa nicht?}%
-{Was tun mit WMS, WFS und WCS, SHP, XML und MXD -- MFG?}%
+{Wir reden doch alle Standard -- oder etwa nicht?\vspace{0.2em}}%
+{Was tun mit WMS, WFS und WCS, SHP, XML und MXD~-- MFG?}%
 {
-GDAL, OGR, PDAL, GEOS und FDO -- und am Ende brauchen doch alle FME?
-Die Open-Source-GIS-Welt bietet eine Vielzahl an Lösungen, davon sind viele lebendig, andere
-geistern als nicht mehr gepflegte Werkzeuge immer noch im WWW herum.
+Wir leben in einer Welt der Standards: WMS, WFS und WCS, WPS, SLD und CSW.  Wir setzen QGIS, UMN,
+ArcGIS und GeoServer ein.  GDAL, OGR, PDAL, GEOS und FDO~-- und am Ende brauchen doch alle FME?  Mit
+Freundlichen Grüßen (Ein Schelm wer jetzt an Fanta4 denkt). Denn niemand aus der GIS-Praxis kann von
+sich behaupten, am Ende nicht doch migrieren, konvertieren, einlesen oder von A nach B exportieren
+zu müssen.  Ein Wechsel von UMN auf GeoServer?  Ein Wechsel von ArcMap auf QGIS?
 
-Der Vortrag stellt Lösungen für Datenkonvertierung und Systemmigration vor dem Schwerpunkt der
-Migration von GI"=Werkzeugen anhand von anschaulichen Beispielen vor. Und warnt vor denen, die es
-eigentlich nicht mehr gibt.%
+Die Open"=Source"=GIS"=Welt bietet eine Vielzahl an Konverterlösungen, davon sind viele lebendig,
+andere geistern als nicht mehr gepflegte Werkzeuge immer noch im WWW herum.
+
+Der Vortrag stellt eine Reihe dieser Lösungen zur Datenkonvertierung und Systemmigration anhand
+anschaulicher Beispiele vor und warnt vor denen, die es eigentlich nicht mehr gibt.
 }
 
 \newtimeslot{15:35}
@@ -186,8 +190,15 @@ Verbandsmitgliedern vorliegt und gemeinsam in einen Primärdatenbestand eingearb
     only downtime needs to be guarded but also whether the services are functioning correctly and do not
     suffer from performance and/or other Quality of Service (QoS) issues.
 
-    GeoHealthCheck is an open source Python application for monitoring OGC Web Services
-    uptime and Quality of Service.
+    GeoHealthCheck (GHC) is an open source web-based framework
+    through which OWS-based web services (and in fact any web-API), can be monitored.
+    GHC is written in Python.
+    
+    GHC consists of two parts~-- a Flask-webapp through which OWS endpoints
+    and their QoS checks can be managed, and for visualizing monitoring-results plus a monitoring engine
+    (via cron) that executes the "health-checks".
+    Both share a common database.
+    The database also stores all historic results, allowing for various forms of reporting.
   \end{otherlanguage}%
 }
 

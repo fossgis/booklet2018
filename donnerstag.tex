@@ -269,7 +269,11 @@ ermöglicht, klassische Geoverarbeitungswerkzeuge im Browser auszuführen. Das F
 ermöglicht das clientseitige Verarbeiten und Analysieren von Geodaten und spart Ihnen die
 Einrichtung einer komplexen serverseitigen Infrastruktur. Komfortabler geht es kaum: Turf einbinden,
 wenigen Zeilen Code schreiben und in Sekundenschnelle komplexe ortsbezogene Fragen beantworten. Und
-das alles lokal in Ihrem Browser und sogar offline!%
+das alles lokal in Ihrem Browser und sogar offline!
+
+Im Vortrag werden verschiedene Anwendungsbeispiele aufgezeigt, die diese Vorteile verdeutlichen. Die
+Erstellung von Puffern, Punkt-in-Polygon, Zusammenführen, Ausschneiden und viele
+andere Funktionen zeigen die Möglichkeiten von Turf.js.%
 }
 
 % time: 2018-03-22 13:40:00
@@ -281,8 +285,10 @@ In der Präsentation wird zu Beginn ein Überblick über den Stand von Open Data
 Schwerpunkt dabei sind Fahrplandaten in Deutschland. Im zweiten Teil der Präsentation werden
 Anwendungen vorgestellt, die mit offenen ÖPNV-Daten arbeiten.%
 }
-
+\vfill
 \input{sponsorentexte/210-latlon.tex}
+\vfill
+\vfill
 
 \newtimeslot{14:15}
 % time: 2018-03-22 14:15:00
@@ -329,8 +335,8 @@ Verwendung offener Geodaten erläutert.%
 \newtimeslot{14:50}
 % time: 2018-03-22 14:50:00
 \abstractAPH{Felix Kunde}%
-{Kompakte Datenbankschemata für \mbox{dynamisch} erweiterbare GML Application Schemas\vspace{0.3em}}%
-{Die neue Version der 3DCityDB zeigt, wie es gehen kann}%
+{Kompakte Datenbankschemata für \mbox{dynamisch} erweiterbare\linebreak GML Application Schemas\vspace{0.2em}}%
+{Die neue Version der 3DCityDB zeigt,\linebreak wie es gehen kann}%
 {%
 Durch größere Verfügbarkeit von 3D-Geodaten wächst die Akzeptanz für CityGML und der Bedarf nach
 Domänen-spezifischen Erweiterungen des Standards (ADEs), z.\,B. Lärmkartierung oder
@@ -355,14 +361,20 @@ JavaScript-Entwicklung beleuchtet und bewertet.%
 
 % time: 2018-03-22 14:50:00
 \abstractVier{Thomas Skowron}%
-{Pipelinebasierte Erzeugung von Karten}%
+{Pipelinebasierte Erzeugung\linebreak von Karten\vspace{0.2em}}%
 {Geodaten verarbeiten ohne Datenbanksystem}%
 {%
-Im OpenStreetMap-Umfeld werden Daten meist erst in eine Datenbank geladen, um diese hiernach wieder zu
-extrahieren. Im Zuge dessen entstehen bei großen Datensätzen hierbei häufig Flaschenhälse, die eine
-effiziente Verarbeitung verhindern. Dieser Vortrag schlägt Methoden vor, um Daten sequentiell in
-einer Pipelinestruktur zu verarbeiten, um ressourcenschonend und schneller als bestehende Lösungen
-Daten zu verarbeiten, filtern und zu transformieren.%
+Das übliche Vorgehen, um große Geodatensätze wie OSM-Länderextrakte oder weltweite Daten zu Karten
+zu verarbeiten, ist, sie zunächst in eine Datenbank zu laden und anschließend
+Stück für Stück wieder zu extrahieren, um daraus Bitmaps oder Vektor\-tiles zu generieren. Aufgrund
+verschiedener Limitierungen ist dies jedoch ein ressourcenintensiver Prozess, der viel Zeit in
+Anspruch nehmen kann.
+
+Inhalt dieses Vortrags sind alternative Ansätze hierzu. Wie verarbeitet man Daten sequentiell, gibt
+sie an andere Teilsysteme weiter und welche Formate und Werkzeuge kann man verwenden?
+Es wird vorgestellt, wie man seine
+Ziele auch mit wenig Ressourcen erreichen kann, aber auch vollkommen flexibel spezielle Lösungen
+entwickeln kann.%
 }
 
 \newtimeslot{15:45}
@@ -407,14 +419,17 @@ diesen Anwendungsbereich.%
 
 \newtimeslot{16:20}
 \abstractAPH{Johannes Kröger}%
-{Karten aus QGIS ins Buch, Web oder auf die Leinwand}%
-{Eine Übersicht der vielseitigen Exportmöglichkeiten von QGIS}%
+{Karten aus QGIS ins Buch, Web\linebreak oder auf die Leinwand\vspace{0.2em}}%
+{Eine Übersicht der vielseitigen \mbox{Exportmöglichkeiten} von QGIS}%
 {%
 Neben den mitgelieferten Funktionen bietet QGIS dank seines umfangreichen Pluginkatalogs eine
 Vielzahl von Möglichkeiten Kartenprojekte in unterschiedlicher Art und Weise und für
 unterschiedlichste Zwecke zu exportieren. Etwa per automatisierter "`Stapelverarbeitung"', als
 interaktive Webkarten, Videos oder auch 3D-Viewer. Die Atlas-Erzeugung und die Erweiterungen HTML Image
-Map Creator, qgis2web, QTiles, Time Manager sowie qgis2threejs stellen diese Optionen zur Verfügung.%
+Map Creator, qgis2web, QTiles, Time Manager sowie qgis2threejs stellen diese Optionen zur Verfügung.
+
+Im Vortrag werden Exporte verschiedener Beispielprojekte gezeigt und dabei die jeweiligen
+Entscheidungen und Vor-/Nachteile in der Verwendung des jeweiligen Plugins erläutert.%
 }
 
 \abstractZwei{Robin Luckey}%
