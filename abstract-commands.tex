@@ -72,6 +72,13 @@ height=169mm, contents={%
 height=169mm, contents={%
   \includegraphics{wallpaper/freitag-gerade.pdf}%
 }]{freitaggerade}
+\DeclareNewLayer[background, oddpage,  width=125mm,%
+height=169mm, contents={%
+  \includegraphics{wallpaper/freitag-ungerade-gedreht.pdf}%
+}]{freitagungeradegedreht}
+\newpairofpagestyles[scrheadings]{freitag-tabelle}{}
+\AddLayersAtBeginOfPageStyle{freitag-tabelle}{freitaggerade}
+\AddLayersAtBeginOfPageStyle{freitag-tabelle}{freitagungeradegedreht}
 \newpairofpagestyles[scrheadings]{freitag}{}
 \AddLayersAtBeginOfPageStyle{freitag}{freitaggerade}
 \AddLayersAtBeginOfPageStyle{freitag}{freitagungerade}
