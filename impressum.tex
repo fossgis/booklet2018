@@ -1,7 +1,14 @@
 \newpage
-\begin{center}
-  Notizen
-\end{center}
+% neuer Layer für Geländeplan
+\DeclareNewLayer[background, oddorevenpage,  width=125mm,%
+height=169mm, contents={%
+  \includegraphics{wallpaper/stadtplan.pdf}%
+}]{raumplana6}
+\newpairofpagestyles[scrheadings]{raumplan}{}
+\AddLayersAtBeginOfPageStyle{raumplan}{raumplana6}
+\pagestyle{raumplan}
+\null
+\label{uebersichtskarte}
 
 \newpage
 \section*{Impressum}
@@ -32,8 +39,6 @@ Quellcode: github.com/fossgis/booklet2018\\
 \noindent Satz und Layout: Michael Reichert\\
 Titelgestaltung: Christopher Lorenz, Michael Reichert\\
 Geodaten: \includegraphics[height=7pt]{copyright}~Open\-Street\-Map-Mitwirkende, osm.org/copyright\\
-Karte auf der Rückseite: openstreetmap-carto\\
-Geländeplan: Stephan Herritsch\\
 Icons in den Tabellen: SJJB Management, CC-0\\
 Lektorat:
   Astrid Emde,
