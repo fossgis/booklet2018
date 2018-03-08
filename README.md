@@ -13,6 +13,10 @@ pdflatex master.tex
 pdflatex master.tex
 ```
 
+## Contributing
+
+The PDF has been submitted to the print shop on 2018-03-08. Therefore pull requests and issues are disabled for this repository.
+
 ## License
 
 This booklet is licensed under [Creative Commons Attribution Share-Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/) if not otherwise stated. Logos are not available under that license.
